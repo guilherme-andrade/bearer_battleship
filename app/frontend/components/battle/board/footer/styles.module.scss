@@ -1,0 +1,24 @@
+@import "assets/stylesheets/config/all";
+
+.wrapper {
+  display: flex;
+  width: calc(#{$cell-size} * 10);
+  position: relative;
+  align-items: center;
+}
+
+.title {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  text-orientation: mixed;
+  width: $cell-size;
+  text-align: center;
+  line-height: 2;
+  text-transform: uppercase;
+  color: $gray-700;
+  display: flex;
+}
+
+.content {
+  padding-left: rem(14px);
+}

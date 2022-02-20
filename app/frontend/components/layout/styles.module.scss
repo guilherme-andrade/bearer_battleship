@@ -1,0 +1,41 @@
+@import "assets/stylesheets/config/all";
+
+$container-width: 972px;
+$layout-height: 100vh;
+$header-height: rem(96px);
+$main-height: calc(#{$layout-height} - #{$header-height});
+$main-padding-top: rem(48px);
+
+.wrapper {
+  min-height: 100vh;
+  background-color: $gray-100;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url('assets/images/background.svg') no-repeat;
+  background-size: cover;
+}
+
+.header {
+  height: $header-height;
+  position: relative;
+  z-index: 1;  
+}
+
+.main {
+  max-width: $container-width;
+  margin: 0 auto;
+  min-height: calc(100vh - #{$main-height});
+  box-sizing: content-box;
+  padding-top: $main-padding-top;
+  padding-bottom: $main-padding-top;
+  position: relative;
+  z-index: 1;
+}

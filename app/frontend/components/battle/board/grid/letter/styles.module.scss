@@ -1,0 +1,12 @@
+@import "assets/stylesheets/config/all";
+
+$radius: 4px;
+
+.letter {
+  @include cell;
+  @include h2;
+  @include flex-center;
+
+  color: $gray-700;
+  text-transform: uppercase;
+}

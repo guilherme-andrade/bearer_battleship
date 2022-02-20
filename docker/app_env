@@ -1,0 +1,2 @@
+REDIS_URL=redis://kvstore:6379/12
+RAILS_ENV=development

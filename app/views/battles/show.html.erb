@@ -1,0 +1,9 @@
+<%= render Layout::Component.new do |layout| %>
+  <% layout.header do %>
+    <%= render Layout::Header::Component.new %>
+  <% end %>
+
+  <%= render Layout::Cell::Component.new do %>
+    <%= render Battle::Component.new %>
+  <% end %>
+<% end %>

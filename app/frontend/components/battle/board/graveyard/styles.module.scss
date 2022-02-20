@@ -1,0 +1,18 @@
+@import "assets/stylesheets/config/all";
+
+$ship-size: rem(25px);
+$ship-margin-bottom: rem(8px);
+
+.wrapper {
+  display: flex;
+}
+
+.ship {
+  flex: 1 1 auto;
+  line-height: $ship-size;
+
+  &--sunk {
+    text-decoration: line-through;
+    color: $secondary;
+  }
+}

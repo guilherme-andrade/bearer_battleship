@@ -1,0 +1,16 @@
+@import "assets/stylesheets/config/all";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ship {
+  flex: 1 1 auto;
+  width: 50%;
+
+  &--sunk {
+    text-decoration: line-through;
+    color: $secondary;
+  }
+}

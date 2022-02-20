@@ -1,0 +1,24 @@
+@import "assets/stylesheets/config/all";
+
+$logo-height: rem(63px);
+$padding-y: rem(26.5px);
+$padding-x: rem(60px);
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  height: 100%;
+}
+
+.logo {
+  height: $logo-height;
+  object-fit: contain;
+}
+
+.text {
+  color: $gray-700;
+}

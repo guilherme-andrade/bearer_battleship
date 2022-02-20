@@ -1,0 +1,84 @@
+@import "assets/stylesheets/config/all";
+
+$radius: 4px;
+$highlight-size: rem(16px, $font-size-base);
+$min-highlight-size: rem(2px, $font-size-base);
+
+$explode-bezier: cubic-bezier(0,1.76,.66,.8);
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@mixin cell-highlight($size) {
+  $padding-size: calc((#{$cell-size} - #{$size}) / 2);
+
+  display: block;
+  position: absolute;
+  border-radius: 50%;  
+  top: $padding-size;
+  left: $padding-size;
+  width: $size;
+  height: $size;
+}
+
+.cell {
+  @include cell;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: $radius;
+  }  
+
+  &--main-player {
+    &::before {
+      background-color: $primary-lightest;
+
+      &:hover {
+        background-color: $primary-lighter;
+      }
+    }    
+
+    &.cell--miss .hitbox {
+      background-color: $primary-light;
+    }
+  }
+
+  &--opponent {
+    &::before {
+      background-color: $gray-200;
+
+      &:hover {
+        background-color: $gray-300;
+      }
+    }    
+  }
+}

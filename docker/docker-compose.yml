@@ -1,0 +1,51 @@
+version: '3.8'
+
+# Configurations shared by multiple services
+x-app_common: &app_common
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
+  env_file:
+    - app_env
+    - app_env.secrets
+  tmpfs:
+    - /tmp
+  stdin_open: true
+  tty: true
+  volumes:
+    - ..:/app:cached
+    - app_cache:/app/tmp/cache
+    - node_modules:/app/node_modules
+    - packs:/app/public/packs
+
+x-backend: &backend
+  <<: *app_common
+
+services:
+  app:
+    <<: *backend
+    container_name: battleship_app
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: assets
+      WEBPACKER_DISABLE_INTEGRITY_CHECK: '1'
+
+  kvstore:
+    container_name: battleship_kvstore
+    image: redis:alpine
+    volumes:
+      - kvstore_data:/data      
+
+  assets:
+    <<: *app_common
+    container_name: battleship_assets
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+    labels:
+      com.dnsdock.ignore: '1'
+    command: bash -c "yarn install && ./bin/webpack-dev-server"
+
+volumes:
+  kvstore_data:
+  app_cache:
+  node_modules:
+  packs:

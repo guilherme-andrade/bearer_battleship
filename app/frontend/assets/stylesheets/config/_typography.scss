@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+$font-family: 'Source Sans Pro', sans-serif;
+$font-size-base: 14px; 
+
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+// Font sizes
+$h1-font-size: rem(32px, $font-size-base);
+$h2-font-size: rem(20px, $font-size-base);
+$h3-font-size: rem(16px, $font-size-base);
+
+$text-font-size: 1rem;
+
+// Letter spacing
+$h1-letter-spacing: 0.3px;
+$h2-letter-spacing: 0.2px;
+$h3-letter-spacing: 0.2px;
+
+$text-letter-spacing: 0.1px;
+
+// Font weights
+$h1-font-weight: $font-weight-bold;
+$h2-font-weight: $font-weight-bold;
+$h3-font-weight: $font-weight-bold;
+
+$text-font-weight: $font-weight-normal;

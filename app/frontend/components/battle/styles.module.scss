@@ -1,0 +1,19 @@
+@import "assets/stylesheets/config/all";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.divider {
+  display: block;
+  border-right: 1px solid $gray-100;
+  margin: 0 rem(61px);
+}
+
+.section {
+  flex: 1 1 50%;
+}

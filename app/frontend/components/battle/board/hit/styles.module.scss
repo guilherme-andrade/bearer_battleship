@@ -1,0 +1,47 @@
+@import "assets/stylesheets/config/all";
+
+$explode-bezier: cubic-bezier(0,1.76,.66,.8);
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.hit {
+  @include cell-mark($cell-mark-size);
+
+  z-index: 2;
+
+  &--hit {
+    background-color: $secondary;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('/assets/images/icons/explosion-star.svg') no-repeat center center;
+      background-size: contain;
+      transform: scale(0);
+      animation: explode 2s $explode-bezier;
+    }    
+  }
+
+  &--main-player.hit--miss {
+    background-color: $primary-light;
+  }
+
+  &--opponent.hit--miss {
+    background-color: $gray-400;
+  }
+}

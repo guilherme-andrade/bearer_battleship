@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2018", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "target": "es6",
+    "noEmit": true,
+    "types": [ "node", "webpack-env" ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+  },
+  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "compileOnSave": false
+}

@@ -1,0 +1,49 @@
+@mixin cell {
+  display: block;
+  height: $cell-size;
+  width: $cell-size;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@mixin cell-mark($size) {
+  $padding-size: calc((#{$cell-size} - #{$size}) / 2);
+
+  display: block;
+  position: absolute;
+  border-radius: 50%;  
+  top: $padding-size;
+  left: $padding-size;
+  width: $size;
+  height: $size;
+}
+
+@mixin h1 {
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  letter-spacing: $h1-letter-spacing;
+}
+
+@mixin h2 {
+  font-size: $h2-font-size;
+  font-weight: $h2-font-weight;
+  letter-spacing: $h2-letter-spacing;
+}
+
+@mixin h3 {
+  font-size: $h3-font-size;
+  font-weight: $h3-font-weight;
+  letter-spacing: $h3-letter-spacing;
+}
+
+@mixin text {
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  letter-spacing: $text-letter-spacing;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

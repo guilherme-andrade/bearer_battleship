@@ -1,0 +1,22 @@
+@import "assets/stylesheets/config/all";
+
+$radius: rem(4px);
+$padding-y: rem(13px);
+
+.heading {
+  border-radius: $radius;
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+  text-align: center;
+  width: 100%;
+
+  &--primary {
+    background: $primary;
+    color: $white;
+  }
+
+  &--muted {
+    background: $gray-600;
+    color: $white;
+  }
+}

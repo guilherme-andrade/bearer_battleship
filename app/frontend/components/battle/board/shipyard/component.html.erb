@@ -1,0 +1,5 @@
+<div class="<%= class_name(:wrapper) %>">
+  <% ::Ship::PARTS.keys.each do |ship| %>
+    <%= render_ship(ship) %>
+  <% end %>
+</div>

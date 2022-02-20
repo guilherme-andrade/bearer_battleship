@@ -1,0 +1,14 @@
+@import "assets/stylesheets/config/all";
+
+$cell-padding: rem(72px);
+$radius: rem(12px);
+
+.cell {
+  padding: $cell-padding;
+  background: $white;
+  border-radius: $radius;
+  border: 1px solid $gray-100;
+  box-shadow: 2px 2px 4px rgba($black, .08);
+  width: 100%;
+  box-sizing: border-box;
+}

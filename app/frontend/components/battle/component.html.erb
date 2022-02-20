@@ -1,0 +1,27 @@
+<%= component_controller(class: class_name(:wrapper)) do %>
+  <section class="<%= class_name(:section) %>" id="main-player-board">
+    <%= render Battle::Board::Component.new do |board| %>
+      <% board.header(text: 'Your fleet', variant: 'primary') %>
+
+      <% board.footer(title: 'Shipyard') do %>
+        <%= render Battle::Board::Shipyard::Component.new(player: 'main-player', battlefield: battlefield) %>
+      <% end %>
+
+      <%= render Battle::Board::Grid::Component.new(player: 'main-player', battlefield: battlefield) %>
+    <% end %>
+  </section>
+
+  <div class="<%= class_name(:divider) %>"></div>
+
+  <section class="<%= class_name(:section) %>" id="opponent-board">
+    <%= render Battle::Board::Component.new do |board| %>
+      <% board.header(text: 'Opponent', variant: 'muted') %>
+
+      <% board.footer(title: 'Graveyard') do %>
+        <%= render Battle::Board::Graveyard::Component.new(player: 'opponent', battlefield: battlefield) %>
+      <% end %>
+
+      <%= render Battle::Board::Grid::Component.new(player: 'opponent', battlefield: battlefield) %>
+    <% end %>
+  </section>
+<% end %>

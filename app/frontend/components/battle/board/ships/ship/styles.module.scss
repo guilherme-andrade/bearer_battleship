@@ -1,0 +1,24 @@
+@import "assets/stylesheets/config/all";
+
+.ship {
+  display: flex;
+  margin-right: 1rem;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &--ghost {
+    opacity: 0.5;
+  }
+
+  &--placed {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.part {
+  @include cell;
+}
