@@ -14,12 +14,11 @@ Go to [localhost:3000](http://localhost:3000) to see the application running.
 
 The game starts with an empty board. The player can place their boats on the board by dragging them on to the targetted cell.
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/595772e44c5c4c70a7b02e628ca3189f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/595772e44c5c4c70a7b02e628ca3189f-with-play.gif)](https://www.loom.com/embed/595772e44c5c4c70a7b02e628ca3189f)
 
 Once all ships are laid down, the player can start bombing the opponent's board. With every bomb placed, the opponent will randomly bomb back at the player.
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/051a5c7df24140a594022b3035c6354e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/051a5c7df24140a594022b3035c6354e-with-play.gif)](https://www.loom.com/embed/051a5c7df24140a594022b3035c6354e)
 
 
 The first player to bomb all of the opponent's ships wins.
