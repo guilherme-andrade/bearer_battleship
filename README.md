@@ -23,13 +23,37 @@ Once all ships are laid down, the player can start bombing the opponent's board.
 
 The first player to bomb all of the opponent's ships wins.
 
+## Tech stack
+
+- Rails
+- Docker
+- Typescript
+- ViewComponent
+- StimulusJS
+- StimulusReflex (with view_component_reflex)
+- Redis (used for caching the session data used by stimulus_reflex)
+- CSS modules for styling
+- Webpack via rails webpacker
+- Dry-initializer
+
+## Finding your way around the code
+
+The application is mostly contained in viewcomponents. These are located under the `app/frontend/components` directory.
+
+The css is all custom, and mostly located as sidecar files to the components in the `app/frontend/components` directory. The config css is locates in `app/frontend/assets`.
+
+Stimulus controllers (only 2) are also located in the `app/frontend/components` directory as sidecar controllers.
+
+The custom webpack config to make this possible is located in `app/config/webpack`.
+
 
 ## Running specs
+
+Make sure to run them from the docker directory of the repository:
 
 ```sh
 docker compose run --rm app bundle exec rspec
 ```
-
 
 ## Known issues
 
