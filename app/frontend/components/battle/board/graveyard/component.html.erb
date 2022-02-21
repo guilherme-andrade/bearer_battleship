@@ -1,4 +1,4 @@
-<div class="<%= class_name(:wrapper) %>">
+<div class="<%= class_name(:wrapper) %>" data-testid="graveyard">
   <% ::Ship::PARTS.each_slice(3) do |ship_configs| %>
     <div class="<%= class_name(:column) %>">
       <% ship_configs.each do |ship, parts| %>

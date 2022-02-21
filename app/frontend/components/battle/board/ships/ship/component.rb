@@ -8,7 +8,7 @@ module Battle
           option :placed, default: proc { false }
 
           def call
-            component_controller class: class_name(:ship, ghost_class, placed_class), draggable: true, data: { action: component_action('dragstart->ghost'), ship: ship } do
+            component_controller class: class_name(:ship, ghost_class, placed_class), draggable: true, data: { testid: "ship", action: component_action('dragstart->ghost'), ship: ship } do
               ::Ship::PARTS[ship].reverse.map do |part|
                 content_tag :span, class: class_name(:part) do
                   render Atom::Component.new(part: part, direction: 'right', clickable: false)

@@ -12,7 +12,7 @@ module Battle
           alias bombed? bombed
 
           def call
-            component_controller do
+            component_controller(data: { testid: "cell" }) do
               reflex_tag('click->bomb', :span, nil, class: class_name(:cell, player, hit_or_miss), data: { action: component_action('dragover->dragging', 'drop->placeShip'), cell: coordinates, part: ship_part }) do
                 html = []
                 

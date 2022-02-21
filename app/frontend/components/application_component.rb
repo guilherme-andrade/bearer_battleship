@@ -13,7 +13,7 @@ class ApplicationComponent < ViewComponentReflex::Component
   end  
 
   def identifier(component = nil)
-    @identifier ||= (component || self.class)
+    @identifier = (component || self.class)
                       .name
                       .sub(/::Component/, '')
                       .underscore

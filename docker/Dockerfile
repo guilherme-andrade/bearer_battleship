@@ -5,7 +5,7 @@ ARG APP_DIR=app
 ARG PORT=3000
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-ENV BUNDLE_WITHOUT test:production
+ENV BUNDLE_WITHOUT production
 
 LABEL Name=$APP_NAME Version=0.0.1
 
@@ -33,11 +33,11 @@ WORKDIR /$APP_DIR
 
 RUN npm install yarn -g
 
-RUN gem install bundler:2.2.25
-RUN bundle config --global frozen 1
+RUN gem install bundler:2.2.32
 
 COPY Gemfile* /$APP_DIR/
 COPY package.json /$APP_DIR/
+
 RUN bundle install
 
 CMD rm -f /app/tmp/pids/server.pid && rails s -b 0.0.0.0

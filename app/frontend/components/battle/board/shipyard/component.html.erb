@@ -1,4 +1,4 @@
-<div class="<%= class_name(:wrapper) %>">
+<div class="<%= class_name(:wrapper) %>" data-testid="shipyard">
   <% ::Ship::PARTS.keys.each do |ship| %>
     <%= render_ship(ship) %>
   <% end %>

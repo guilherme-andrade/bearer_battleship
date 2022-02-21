@@ -6,7 +6,7 @@ module Battle
         option :player, default: proc { 'main-player' }
 
         def call
-          content_tag(:span, nil, class: hit_class_name)
+          content_tag(:span, nil, class: hit_class_name, data: { testid: "hit" })
         end
 
         def hit_class_name

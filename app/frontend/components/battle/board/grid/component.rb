@@ -9,7 +9,7 @@ module Battle
         option :battlefield, default: proc { {} }
 
         def call
-          component_controller(class: class_name(:grid)) do
+          component_controller(class: class_name(:grid), data: { testid: "grid" }) do
             [header_row, grid_body].join.html_safe
           end
         end

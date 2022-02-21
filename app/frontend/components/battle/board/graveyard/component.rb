@@ -7,7 +7,7 @@ module Battle
 
         def render_ship(ship, size)
           text = ship.to_s.capitalize + [' (', size.to_s, ' blocks)'].join
-          content_tag :div, text, class: ship_class_name(ship)
+          content_tag :div, text, class: ship_class_name(ship), data: { testid: "ship-name" }
         end
 
         def ship_class_name(ship)
