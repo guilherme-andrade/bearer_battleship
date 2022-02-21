@@ -12,7 +12,7 @@ Go to [localhost:3000](http://localhost:3000) to see the application running.
 
 ## The Game
 
-The game starts with an empty board. The player can place their boats on the board by dragging them on to the targetted cell.
+The game starts with an empty board. The player can place their boats on the board by dragging them on to the targetted cell. The boat is placed in a random direction, with its front laying on the chosen cell.
 
 [![Watch the video](https://cdn.loom.com/sessions/thumbnails/595772e44c5c4c70a7b02e628ca3189f-with-play.gif)](https://www.loom.com/embed/595772e44c5c4c70a7b02e628ca3189f)
 
