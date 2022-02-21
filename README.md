@@ -5,7 +5,7 @@ Clone the repository and run the following commands:
 ```sh
 touch docker/app_env.secrets
 cd docker
-docker-compose up --build
+docker compose up --build
 ```
 
 Go to [localhost:3000](http://localhost:3000) to see the application running.
@@ -15,7 +15,7 @@ Go to [localhost:3000](http://localhost:3000) to see the application running.
 Make sure to run them from the docker directory of the repository:
 
 ```sh
-docker compose run --rm app bundle exec rspec
+docker compose run --rm app rspec
 ```
 
 ## The Game
