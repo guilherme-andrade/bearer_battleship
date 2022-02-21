@@ -10,6 +10,14 @@ docker-compose up --build
 
 Go to [localhost:3000](http://localhost:3000) to see the application running.
 
+## Running specs
+
+Make sure to run them from the docker directory of the repository:
+
+```sh
+docker compose run --rm app bundle exec rspec
+```
+
 ## The Game
 
 The game starts with an empty board. The player can place their boats on the board by dragging them on to the targetted cell. The boat is placed in a random direction, with its front laying on the chosen cell.
@@ -45,15 +53,6 @@ The css is all custom, and mostly located as sidecar files to the components in 
 Stimulus controllers (only 2) are also located in the `app/frontend/components` directory as sidecar controllers.
 
 The custom webpack config to make this possible is located in `app/config/webpack`.
-
-
-## Running specs
-
-Make sure to run them from the docker directory of the repository:
-
-```sh
-docker compose run --rm app bundle exec rspec
-```
 
 ## Known issues
 
