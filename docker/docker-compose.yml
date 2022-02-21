@@ -28,6 +28,8 @@ services:
     environment:
       WEBPACKER_DEV_SERVER_HOST: assets
       WEBPACKER_DISABLE_INTEGRITY_CHECK: '1'
+    ports:
+      - '3000:3000'
 
   kvstore:
     container_name: battleship_kvstore

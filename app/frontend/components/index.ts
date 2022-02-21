@@ -1,6 +1,7 @@
 import application from "plugins/stimulus";
 
 const context = require.context("./", true, /index.(ts|js)$/);
+const stylesContext = require.context("./", true, /styles.module.scss$/);
 
 context.keys().forEach((path) => {
   const mod = context(path);
@@ -15,4 +16,6 @@ context.keys().forEach((path) => {
 
   application.register(identifier, mod.default);
 });
+
 context.keys().forEach(context);
+stylesContext.keys().forEach(stylesContext);

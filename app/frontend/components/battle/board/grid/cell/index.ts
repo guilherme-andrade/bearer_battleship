@@ -1,7 +1,5 @@
 import { Controller } from "stimulus";
 import StimulusReflex from "stimulus_reflex";
-import styles from "./styles.module.scss";
-console.log(styles);
 export default class extends Controller {
   stimulate: (key: string, ...other: any) => void;
 

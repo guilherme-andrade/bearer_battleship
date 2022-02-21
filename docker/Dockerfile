@@ -1,4 +1,5 @@
-FROM ruby:2.7.5-buster
+FROM ruby:2.7.5-slim
+
 ARG APP_NAME=battleship
 ARG APP_DIR=app
 ARG PORT=3000
@@ -8,7 +9,7 @@ ENV BUNDLE_WITHOUT test:production
 
 LABEL Name=$APP_NAME Version=0.0.1
 
-RUN apt-get update && apt-get -yq dist-upgrade \
+RUN apt-get clean && apt-get update && apt-get -yq dist-upgrade \
     && apt-get install -qqy --no-install-recommends \
     build-essential \
     curl \
