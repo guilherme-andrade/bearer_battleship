@@ -62,3 +62,4 @@ The custom webpack config to make this possible is located in `app/config/webpac
 - [ ] Cache persists across sessions, which makes it impossible to play again without restarting the server.
 - [ ] The game is not fully responsive.
 - [ ] Cache sometimes does not clear properly, leaving random bombs or ship parts on the board.
+- [ ] The game has no error handling or events to provide user feedback when things go wrong.
